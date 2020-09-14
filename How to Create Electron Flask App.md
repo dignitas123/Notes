@@ -39,7 +39,7 @@ let exectuablePath = 'flask_server/flask_server'; // linux and windows different
 
 Make sure you delete build, dist folder and spec file before making a new
 
-# nach 'const mainWindow' declaration
+# after 'const mainWindow' declaration
 
 ```
   const urlExist = require("url-exist");
