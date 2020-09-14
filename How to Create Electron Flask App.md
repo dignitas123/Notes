@@ -25,6 +25,10 @@ pip install -e .
 
 pyinstaller --add-data="templates:templates" --add-data="static:static" \flask_server.py
 
+## -NOTE-
+
+Make sure you delete build, dist folder and spec file before making a new
+
 ## now copy the whole folder in an electron folder
 
 ### in main.js
@@ -43,10 +47,6 @@ let exectuablePath = 'flask_server/flask_server'; // linux and windows different
     console.log(data.toString());
   })
 ```
-
-## NOTE
-
-Make sure you delete build, dist folder and spec file before making a new
 
 ### after 'const mainWindow' declaration
 
