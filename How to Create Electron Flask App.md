@@ -1,3 +1,12 @@
+cd ~
+mkdir yourproject
+mkdir App
+
+// create flask and electron folder
+
+// install electron quick build into electron folder
+// https://www.youtube.com/watch?v=OVY4ifYy3UI clone from this video the python files https://github.com/shahriar0247/python-electron
+
 cd ~/yourproject/App/flask
 
 # create environment
