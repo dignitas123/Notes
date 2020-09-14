@@ -29,9 +29,9 @@ pyinstaller --add-data="templates:templates" --add-data="static:static" \flask_s
 
 Make sure you delete build, dist folder and spec file before making a new
 
-## now copy the whole folder in an electron folder
+## now copy the whole folder in the electron folder
 
-### in main.js
+## in main.js:
 
 ### after 'createWindow() {'
 
