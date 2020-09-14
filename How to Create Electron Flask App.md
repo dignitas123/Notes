@@ -9,27 +9,27 @@ mkdir App
 
 cd ~/yourproject/App/flask
 
-# create environment
+## create environment
 
 python3 -m venv yourEnvironment
 
-# activate environment
+## activate environment
 
 . yourEnvironment/bin/activate
 
-# install if new pacakges used
+## install if new pacakges used
 
 pip install -e .
 
-# only now: time to create the folder with an executable. ":" in linux, ";" in windows
+## only now: time to create the folder with an executable. ":" in linux, ";" in windows
 
 pyinstaller --add-data="templates:templates" --add-data="static:static" \flask_server.py
 
-# now copy the whole folder in an electron folder
+## now copy the whole folder in an electron folder
 
-# in main.js
+### in main.js
 
-# after 'createWindow() {'
+### after 'createWindow() {'
 
 ```
 let exectuablePath = 'flask_server/flask_server'; // linux and windows different?
@@ -44,11 +44,11 @@ let exectuablePath = 'flask_server/flask_server'; // linux and windows different
   })
 ```
 
-# NOTE
+## NOTE
 
 Make sure you delete build, dist folder and spec file before making a new
 
-# after 'const mainWindow' declaration
+### after 'const mainWindow' declaration
 
 ```
   const urlExist = require("url-exist");
@@ -60,7 +60,7 @@ Make sure you delete build, dist folder and spec file before making a new
   })();
 ```
 
-# after 'mainWindow.loadFile('index.html')'
+### after 'mainWindow.loadFile('index.html')'
 
 ```
   mainWindow.on('closed', function(){ 
@@ -84,7 +84,7 @@ Make sure you delete build, dist folder and spec file before making a new
   });
 ```
 
-# do this before 'npm start'
+## do this before 'npm start'
 
 cd ~/yourproject/App/electron
 
