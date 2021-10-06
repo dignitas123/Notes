@@ -1,5 +1,5 @@
 # decorate git log, make it more readable
-  git log --graph --oneline --decorate
+  `git log --graph --oneline --decorate`
 
 # git add . is useless when committing with `-am` flag
   git commit -am "change"
