@@ -2,11 +2,11 @@
   `git log --graph --oneline --decorate`
 
 # git add . is useless when committing with `-am` flag
-  git commit -am "change"
+  `git commit -am "change"`
 
 # Create aliases for repeated commands
-  git config --global alias.ac "commit -am"
-  git ac "new commit"
+  `git config --global alias.ac "commit -am"`
+  `git ac "new commit"`
 
 # force overwrite from local changes to remote git
   git push --force
