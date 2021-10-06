@@ -1,7 +1,7 @@
 # decorate git log, make it more readable
   `git log --graph --oneline --decorate`
 
-# git add . is useless when committing with `-am` flag
+# git add . is useless when committing with '-am' flag
   `git commit -am "change"`
 
 # Create aliases for repeated commands
@@ -30,3 +30,11 @@
   `it stash pop`\
   `git stash list`\
   `git stash apply 0`
+
+# remove files
+  `git rm -rf filename`
+  
+# go to previous branch
+  `git checkout -`
+ 
+ 
