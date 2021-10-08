@@ -60,7 +60,7 @@ export default defineConfig({
   </metainfo>
 ```
 
-## example to extent it to 'Some Page' in another view
+## example to extend it to 'Some Page' in another view
 ```
 export default defineComponent({
   components: { HelloWorld },
