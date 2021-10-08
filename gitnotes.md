@@ -27,7 +27,7 @@
   `git stash save coolstuff`
 
 # load up the saved changes again
-  `it stash pop`\
+  `git stash pop`\
   `git stash list`\
   `git stash apply 0`
 
