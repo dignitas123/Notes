@@ -1,7 +1,8 @@
 ## Install dependencies
 `npm install vite @vitejs/plugin-vue --save-dev`
 
-## add "dev": "vite" to scripts in package.json
+## add this to scripts part in package.json
+`"dev": "vite"`
 
 ## optionally add
 `"build": "vue-tsc --noEmit && vite build", // build for production`\
