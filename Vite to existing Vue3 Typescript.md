@@ -51,7 +51,7 @@ export default defineConfig({
 ## What about titles?
 `npm install vue-meta vue-meta@alpha`
 
-# then you can add this to App.vue:
+## then you can add this to App.vue:
 ```
   <metainfo>
     <template v-slot:title="{ content }">{{
@@ -60,7 +60,7 @@ export default defineConfig({
   </metainfo>
 ```
 
-# example to extent it to 'Some Page' in another view
+## example to extent it to 'Some Page' in another view
 ```
 export default defineComponent({
   components: { HelloWorld },
