@@ -47,3 +47,25 @@ export default defineConfig({
 
 </html>
 ```
+
+## What about titles?
+`npm install vue-meta vue-meta@alpha`
+
+# then you can add this to App.vue:
+```
+  <metainfo>
+    <template v-slot:title="{ content }">{{
+      content ? `${content} | Hello World Vite Test` : `Hello World Vite Test`
+    }}</template>
+  </metainfo>
+```
+
+# example to extent it to 'Some Page' in another view
+```
+export default defineComponent({
+  components: { HelloWorld },
+  setup() {
+    useMeta({ title: "Some Page" });
+  },
+});
+```
