@@ -1,3 +1,7 @@
+# initialize
+  `git init`\
+  `git remote add origin https://github.com/dignitas123/Notes.git`
+
 # decorate git log, make it more readable
   `git log --graph --oneline --decorate`
 
