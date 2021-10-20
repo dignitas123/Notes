@@ -41,4 +41,10 @@
 # go to previous branch
   `git checkout -`
  
- 
+# delete history (in case credentials are in it acc.)
+  `rm -rf .git`\
+  `git init`\
+  `git add .`\
+  `git commit -m "Removed history, due to sensitive data"`\
+  `git remote add origin github.com:yourhandle/yourrepo.git`\
+  `git push -u --force origin master`
