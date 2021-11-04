@@ -74,3 +74,65 @@ watchEffect(() => {
 flush: ‘post’
 })
 
+async data load mit computed property und composable
+
+
+export default defineComponent({
+  setup() {
+    const products = reactive([]);
+    onMounted(() => {
+      loadProducts();
+    });
+    const loadProducts = async () {
+      try {
+        const productsSnap = await graphQLProductRequest()
+      } catch (e) {
+        console.log("Error Loading Products");
+      }
+    }
+    return {
+      products,
+    };
+  },
+});
+
+// wiederverwertbares "composable"
+import { reactive, toRefs } from "vue";
+import graphQL from "apolloGraphQL";
+
+// dieser state ist global persisted, products müssen nicht neugeladen werden
+const state = reactive({
+  products: [],
+});
+
+export default function useProduct() {
+  const loadProducts = async() => {
+    try {
+      const products = await graphQLQuery();
+      products.forEach(doc => {
+        state.products.push(product);
+      });
+    } catch (e) {
+      console.log("Error Loading Products")
+    }
+  }
+  // durch ...toRefs wird ein destrukturierbares Javascript Objekt erstellt (nützlich für mehr als 1 state)
+  return { ...toRefs(state),
+    loadProducts
+  }
+}
+
+// 
+import { onMounted } from "vue";
+import useProduct from "@/modules/product";
+export default {
+  setup() {
+    const { products, loadProducts } = useProduct(); // man kann auch nur products laden
+    onMounted(async () => {
+      await loadProducts();
+    });
+    return {
+      products,
+    };
+  },
+};
