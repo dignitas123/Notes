@@ -1,4 +1,5 @@
 source ~/.nvm/nvm.sh
 nvm list
-nvm install
+nvm install node
+nvm install --lts
 nvm use 12.8.1 (for example)
